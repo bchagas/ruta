@@ -1,6 +1,4 @@
 class Organizer < ActiveRecord::Base
-
-  validates_length_of :cep, :is => 8
   before_save :build_cep
 
   def human_cep
@@ -10,6 +8,6 @@ class Organizer < ActiveRecord::Base
   private
 
   def build_cep
-    cep.gsub("-", "")
+    self.cep = cep.gsub "-", ""
   end
 end
