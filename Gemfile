@@ -2,7 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem "rails_admin", :git => 'git://github.com/sferik/rails_admin.git'
 gem "haml-rails", ">= 0.2"
@@ -20,6 +19,7 @@ gem "inploy", ">=1.6.8"
 group :development do
   gem "autotest"
   gem "autotest-notification"
+  gem 'sqlite3-ruby', :require => 'sqlite3'
   gem "rails3-generators", :git => "git://github.com/indirect/rails3-generators.git"
   gem "metric_fu", ">=1.5.1"
 end
